@@ -1,0 +1,8 @@
+[package]
+name = "autodiff"
+version = "0.1.0"
+authors = ["Yati Sagade <yati.sagade@gmail.com>"]
+
+[dependencies]
+num = "0.1.37"
+gnuplot = "*"
