@@ -4,10 +4,12 @@ extern crate gnuplot;
 
 use autodiff::AutoDiff;
 use num::Float;
-use gnuplot::{Figure,Caption,Color};
+use gnuplot::{Figure, Caption, Color};
 
 
-fn sigmoid<T>(x: T) -> T where T: Float {
+fn sigmoid<T>(x: T) -> T
+    where T: Float
+{
     T::one() / (T::one() + (-x).exp())
 }
 
@@ -22,6 +24,8 @@ fn main() {
         ys.push(sig.dval());
     }
     let mut fig = Figure::new();
-    fig.axes2d().lines(&xs, &ys, &[Caption("Derivative of the sigmoid"), Color("black")]);
+    fig.axes2d().lines(&xs,
+                       &ys,
+                       &[Caption("Derivative of the sigmoid"), Color("black")]);
     fig.show();
 }
