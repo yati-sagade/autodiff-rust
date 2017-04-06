@@ -1,6 +1,6 @@
 # Autodiff
 
-[Forward accumulation based automatic differentiation for Rust][1]
+[Forward accumulation][1] based automatic differentiation for Rust.
 
 ## Example
 
